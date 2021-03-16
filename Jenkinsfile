@@ -15,14 +15,14 @@ pipeline {
             steps {
                 echo 'Raise change request...'
                 jiraSendDeploymentInfo(site:'aksservicedesk.atlassian.net',
-                        environmentId:'JNG-11',
-                        environmentName:'JNG-11',
+                        environmentId:'prod-1',
+                        environmentName:'prod-1',
                         environmentType:'production',
                         state:"pending",
                         enableGating:true,
-						issueKeys: ['JNG-11'],						
+			//issueKeys: ['JNG-11'],						
                         serviceIds: [
-                          ''
+                          'b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzE0Yjc1NWYyLTdiYTEtMTFlYi05NjRjLTBhYmUzZjRhNjYwMS9jZmU3YTk0ZS04NjhjLTExZWItOGExNy0wYWJlM2Y0YTY2MDE='
                         ]
                     )
             }
@@ -34,7 +34,7 @@ pipeline {
                         sleep 30
                         checkGatingStatus(
                           site:'aksservicedesk.atlassian.net', 
-                          environmentId:'JNG-11'
+                          environmentId:'prod-1'
                         )
                     }
                 }   
@@ -52,13 +52,13 @@ pipeline {
               success {
                 jiraSendDeploymentInfo (
                         site: 'aksservicedesk.atlassian.net',
-                        environmentId: 'JNG-11',
-                        environmentName: 'JNG-11',
+                        environmentId: 'prod-1',
+                        environmentName: 'prod-1',
                         environmentType: 'production',
                         state: 'successful',
-						issueKeys: ['JNG-11'],
+			//issueKeys: ['JNG-11'],
                         serviceIds: [
-                          ''
+                          'b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzE0Yjc1NWYyLTdiYTEtMTFlYi05NjRjLTBhYmUzZjRhNjYwMS9jZmU3YTk0ZS04NjhjLTExZWItOGExNy0wYWJlM2Y0YTY2MDE='
                         ]
                       )
               }
