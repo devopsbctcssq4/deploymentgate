@@ -20,7 +20,7 @@ pipeline {
                         environmentType:'production',
                         state:"pending",
                         enableGating:true,
-			//issueKeys: ['JNG-11'],						
+			issueKeys: ['JNG-11'],						
                         serviceIds: [
                           'b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzE0Yjc1NWYyLTdiYTEtMTFlYi05NjRjLTBhYmUzZjRhNjYwMS9jZmU3YTk0ZS04NjhjLTExZWItOGExNy0wYWJlM2Y0YTY2MDE='
                         ]
@@ -56,7 +56,7 @@ pipeline {
                         environmentName: 'prod-1',
                         environmentType: 'production',
                         state: 'successful',
-			//issueKeys: ['JNG-11'],
+			issueKeys: ['JNG-11'],
                         serviceIds: [
                           'b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzE0Yjc1NWYyLTdiYTEtMTFlYi05NjRjLTBhYmUzZjRhNjYwMS9jZmU3YTk0ZS04NjhjLTExZWItOGExNy0wYWJlM2Y0YTY2MDE='
                         ]
